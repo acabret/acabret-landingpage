@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/27dfb3bdd2.js" defer crossorigin="anonymous"></script>
   </head>
   <body>
     <section class="homepage">
@@ -31,7 +32,16 @@
             </ul>
           </nav>
         </header>
-        <section class="homepage__main"></section>
+        <section class="homepage__main">
+
+          <h2>Frontend Junior Dev</h2>
+          <h4>Open for work</h4>
+          <img class="homepage__image"src="/img/homepage-image.png" alt="">
+
+
+
+
+        </section>
       </div>
     </section>
 
@@ -39,43 +49,37 @@
       <div class="container">
         <div class="main-content__grid">
           <div class="main-content__block">
-            <div class="main-content__inner">
+            <article class="main-content__inner">
               <h2>Sobre mí</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consectetur aut numquam libero pariatur facere dicta sed, autem
                 ad officia exercitationem?
               </p>
-              <button>
-                Saber más
-              </button>
-            </div>
+              <button id="aboutme-btn">Saber más <span class="click-me">></span></button>
+            </article>
           </div>
           <div class="main-content__block">
-            <div class="main-content__inner">
+            <article class="main-content__inner">
               <h2>Portafolio</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consectetur aut numquam libero pariatur facere dicta sed, autem
                 ad officia exercitationem?
               </p>
-              <button>
-                Ver mi trabajo
-              </button>
-            </div>
+              <button id="portfolio-btn">Ver mi trabajo <span class="click-me">></span></button>
+            </article>
           </div>
           <div class="main-content__block">
-            <div class="main-content__inner">
+            <article class="main-content__inner">
               <h2>Contacto</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consectetur aut numquam libero pariatur facere dicta sed, autem
                 ad officia exercitationem?
               </p>
-              <button>
-                Contáctame
-              </button>
-            </div>
+              <button id="contact-btn">Contáctame <span class="click-me">></span></button>
+            </article>
           </div>
         </div>
       </div>
@@ -83,28 +87,30 @@
 
     <section class="main-content__display">
       <div class="container">
-        <div class="display-wrapper">
-
-
-
-        </div>
+        <div class="display-wrapper"></div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <h3>Alonso Cabret &copy;2021</h3>
+        
+        <h4>contacto@acabret.com</h4>
         <ul class="footer-media">
           <li class="footer-media__item">
-            <a href="" class="footer-media__link">Linkedin</a>
+            <a href="https://www.linkedin.com/in/acabret" target="_blank"  rel="noreferrer noopener" class="footer-media__link"><i class="fab fa-linkedin"></i>
+
+            </a>
           </li>
           <li class="footer-media__item">
-            <a href="" class="footer-media__link">Github</a>
+            <a href="https://github.com/acabret/" target="_blank" rel="noreferrer noopener" class="footer-media__link"><i class="fab fa-github"></i></a>
           </li>
           <li class="footer-media__item">
-            <a href="" class="footer-media__link">Instagram</a>
+            <a href="https://www.instagram.com/alonso.cbrt/" target="_blank"  rel="noreferrer noopener" class="footer-media__link"><i class="fab fa-instagram"></i>
+
+            </a>
           </li>
         </ul>
+        <h4>Copyright &copy; 2021 Alonso Cabret</h4>
       </div>
     </footer>
   </body>
