@@ -99,6 +99,10 @@ a {
   );
 }
 
+.header__navigation{
+  padding-top: .5rem;
+}
+
 .header__logo-text {
   color: white;
   font-size: 1.5rem;
@@ -115,6 +119,8 @@ a {
 .header__navigation .navigation__link {
   text-decoration: none;
   font-size: 20px;
+  /* font-weight: 100; */
+  letter-spacing: .05rem;
   color: white;
   cursor: pointer;
 }
@@ -131,19 +137,48 @@ a {
   color: white;
   margin: 0;
 }
+
+.homepage__main h2 > span{
+  display: inline-block;
+  animation: typing 1.2s infinite linear;
+}
+
+@keyframes typing{
+  0%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0
+  }
+
+
+}
+
+
+p{
+  line-height: 1.5rem;
+}
+
 .homepage__main h4 {
   color: white;
   font-size: 1.5rem;
 }
 
 .homepage__image {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   width: 400px;
 }
+
+
+
 
 @media (min-width: 768px) {
   .header__logo-text {
@@ -156,6 +191,23 @@ a {
 
   .homepage__main h2 {
     max-width: 50%;
+  }
+
+  .link-underline{
+
+    margin-top: 0.5rem;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transform: scaleX(0);
+    transition: all .2s ease-out;
+  
+  }
+  
+  .navigation__nav-item:hover .link-underline{
+  
+    transform: scaleX(1);
+  
   }
 }
 
@@ -185,11 +237,13 @@ a {
 .main-content__inner button {
   display: inline-block;
   position: relative;
-  background-color: rgb(19, 19, 93);
+  background-color: rgb(9, 86, 150);
   color: white;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 100;
+  font-family: var(--header-font);
+  /* letter-spacing: 2px; */
   cursor: pointer;
   outline: none;
   border: none;

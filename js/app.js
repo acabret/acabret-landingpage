@@ -2,6 +2,7 @@ const portfolioBtn = document.querySelector("#portfolio-btn");
 const aboutmeBtn = document.querySelector("#aboutme-btn");
 const contactBtn = document.querySelector("#contact-btn");
 const displayWrapper = document.querySelector(".display-wrapper");
+const footer = document.querySelector('footer');
 
 // console.log(portfolioBtn);
 
@@ -20,7 +21,7 @@ contactBtn.addEventListener("click", (event) => {
   displayWrapper.classList.add('show');
   
   setTimeout(()=>{
-    displayWrapper.scrollIntoView({block:"end", behavior:"smooth"})
+    footer.scrollIntoView({block:"end", behavior:"smooth"})
   }
   ,1000)
 });
@@ -34,6 +35,7 @@ function loadAboutMe() {
   <p>about me</p>
   <p>about me</p>
   <p>about me</p>
+  <img src="/img/homepage-image.png" width="300px" alt="">
   <p>about me</p>
   <p>about me</p>`;
 }
