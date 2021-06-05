@@ -15,8 +15,12 @@
 
     <link rel="shortcut icon" type="image/png" href="/img/icono_pagina.png" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="js/app.js" defer></script>
+    <script src="js/app.js" type="module"></script>
     <script
       src="https://kit.fontawesome.com/27dfb3bdd2.js"
       defer
@@ -24,92 +28,185 @@
     ></script>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__logo-text">Alonso Cabret</h1>
+
+        <nav class="header__navigation">
+          <ul>
+            <li class="navigation__nav-item">
+              <a href="#" class="navigation__link">Sobre mí</a>
+              <div class="link-underline"></div>
+            </li>
+            <li class="navigation__nav-item">
+              <a href="#" class="navigation__link">Portafolio</a>
+              <div class="link-underline"></div>
+            </li>
+            <li class="navigation__nav-item">
+              <a href="#" class="navigation__link">Contacto</a>
+              <div class="link-underline"></div>
+            </li>
+            <li class="navigation__nav-item">
+              <a href="#" class="navigation__link">Night/light mode</a>
+              <div class="link-underline"></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <section class="homepage">
       <div class="container">
-        <header class="header">
-          <h1 class="header__logo-text">Alonso Cabret</h1>
-
-          <nav class="header__navigation">
-            <ul>
-              <li class="navigation__nav-item">
-                <a href="#" class="navigation__link">Sobre mí</a>
-                <div class="link-underline"></div>
-              </li>
-              <li class="navigation__nav-item">
-                <a href="#" class="navigation__link">Portafolio</a>
-                <div class="link-underline"></div>
-              </li>
-              <li class="navigation__nav-item">
-                <a href="#" class="navigation__link">Contacto</a>
-                <div class="link-underline"></div>
-              </li>
-              <li class="navigation__nav-item">
-                <a href="#" class="navigation__link">Night/light mode</a>
-                <div class="link-underline"></div>
-              </li>
-            </ul>
-          </nav>
-        </header>
         <section class="homepage__main">
-          <h2>Frontend Junior Dev<span>_</span>
-          </h2>
-          <h4>Open for work</h4>
           <img class="homepage__image" src="/img/homepage-image.png" alt="" />
+          <h2>Frontend Developer<span>_</span></h2>
+          <h4>En busca de nuevas oportunidades</h4>
         </section>
+      </div>
+    </section>
+
+    <main class="about">
+      <div class="container">
+        <div class="about-block">
+          <h2>its me</h2>
+          <p>
+            Soy un libre pensante, especializado en el area del desarrollo web,
+            lo que me encanta de esta profesión es el constante reto de tener
+            que aprender y aplicar nuevos conocimientos y tecnnologías.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <img
+            class="about-picture"
+            src="./img/about-picture.png"
+            alt="Fotografía de Alonso Cabret"
+          />
+        </div>
+      </div>
+    </main>
+
+    <section class="main-content__display animate__animated">
+      <div class="container">
+        <div class="display-wrapper animate__animated"></div>
       </div>
     </section>
 
     <main class="main-content">
       <div class="container">
-        <div class="main-content__grid">
+        <div class="main-content__grid" data-display="showcase">
           <div class="main-content__block">
             <article class="main-content__inner">
-              <h2>Sobre mí</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur aut numquam libero pariatur facere dicta sed, autem
-                ad officia exercitationem?
-              </p>
+              <div>
+                <h2>Sobre mí</h2>
+                <p>
+                  Soy un libre pensante, especializado en el area del desarrollo
+                  web, lo que me encanta de esta profesión es el constante reto
+                  de tener que aprender y aplicar nuevos conocimientos y
+                  tecnnologías.
+                </p>
+              </div>
+
               <button id="aboutme-btn">
                 Saber más <span class="click-me">></span>
               </button>
             </article>
-          </div>
-          <div class="main-content__block">
-            <article class="main-content__inner">
-              <h2>Portafolio</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur aut numquam libero pariatur facere dicta sed, autem
-                ad officia exercitationem?
-              </p>
-              <button id="portfolio-btn">
-                Ver mi trabajo <span class="click-me">></span>
-              </button>
+            <article class="display-item">
+              <div class="display-item__content">
+                <div>
+                  <h2>Sobre mí</h2>
+                  <p>
+                    Mi nombre es Alonso, soy un desarrollador web con estudios
+                    de ingeniería en informática, y vivo actualmente en la
+                    ciudad de Concepción, Chile.<br />
+                    Dedico mi tiempo a investigar sobre teconología, programar,
+                    practicar ciclismo, lectura y uno que otro video juego.
+                  </p>
+                </div>
+                <div>
+                  <p></p>
+                </div>
+              </div>
             </article>
           </div>
           <div class="main-content__block">
             <article class="main-content__inner">
-              <h2>Contacto</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur aut numquam libero pariatur facere dicta sed, autem
-                ad officia exercitationem?
-              </p>
+              <div>
+                <h2>Servicios</h2>
+                <p>
+                  Sitios web, rediseños ,interfaces, tipografías, backend y
+                  aplicaciones. Te invito a revisar mis servicios y trabajos.
+                </p>
+              </div>
+
+              <button id="portfolio-btn">
+                Ver mi trabajo <span class="click-me">></span>
+              </button>
+            </article>
+            <article class="display-item">
+              <div class="display-item__content">
+                <div>
+                  <h2>Servicios</h2>
+                  <p>
+                    Desarrollo Front y Backend es crear los elementos visuales e
+                    interactivos de una aplicación, así como el funcionamiento
+                    debajo del capó. Puedo hacer esto gracias a tecnologías
+                    como:
+                  </p>
+                  <ul>
+                    <li>HTML/CSS</li>
+                    <li>Javascript ES6+</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>REST APIs</li>
+                    <li>Wordpress CMS</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>fotitos en un grid</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="main-content__block">
+            <article class="main-content__inner">
+              <div>
+                <h2>Contacto</h2>
+                <p>
+                  Me encuentro disponible actualmente para trabajar bajo
+                  contrato, o como freelancer. Si crees que puedo ayudarte de
+                  alguna forma, no dudes en contactarme por aquí abajo.
+                </p>
+              </div>
+
               <button id="contact-btn">
                 Contáctame <span class="click-me">></span>
               </button>
+            </article>
+            <article class="display-item">
+              <div class="display-item__content">
+                <div>
+                  <h2>Contacto</h2>
+                  <p>
+                    Puedes encontrarme en redes sociales, o contactarme
+                    directamente por aquí, prometo responderte lo antes posible.
+                  </p>
+                </div>
+                <div>
+                  <form action="">
+                    <label for="">Nombre</label>
+                    <input type="text" />
+                    <label for="">Correo electrónico</label>
+                    <input type="text" />
+                    <label for="">Mensaje</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </form>
+                </div>
+              </div>
             </article>
           </div>
         </div>
       </div>
     </main>
-
-    <section class="main-content__display">
-      <div class="container">
-        <div class="display-wrapper"></div>
-      </div>
-    </section>
 
     <footer class="footer">
       <div class="container">
@@ -124,7 +221,7 @@
               ><i class="fab fa-linkedin"></i>
             </a>
           </li>
-          
+
           <li class="footer-media__item">
             <a
               href="https://github.com/acabret/"
