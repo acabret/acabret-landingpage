@@ -1,6 +1,6 @@
 About:
 
-Soy Alonso, graduado de Ingeniería en Informática,
+Mi nombre es Alonso, un graduado de Ingeniería en Informática,
 y actualmente un desarrollador web y freelancer radicado
 en la ciudad de Concepción, Chile. Apasionado por la tecnología,
 el ciclismo y en entregar productos de gran valor a mi clientes. 
@@ -10,7 +10,7 @@ el ciclismo y en entregar productos de gran valor a mi clientes.
 
 Servicios:
 
-Entre los sericios disponibles que tengo para tí, puedo destacar los siguientes
+Entre los sericios disponibles que tengo para ti, puedo destacar los siguientes
   Diseño y Desarrollo Web personalizado
   Despliegue y Mantenimiento de sitios web en Wordpress
   Diseño Responsivo

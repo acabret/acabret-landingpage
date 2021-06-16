@@ -19,7 +19,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="/css/test.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+
     <script src="js/app.js" type="module"></script>
     <script
       src="https://kit.fontawesome.com/27dfb3bdd2.js"
@@ -32,7 +34,7 @@
       <div class="container">
         <h1 class="header__logo-text">Alonso Cabret</h1>
 
-        <nav class="header__navigation">
+        <!-- <nav class="header__navigation">
           <ul>
             <li class="navigation__nav-item">
               <a href="#" class="navigation__link">Sobre mí</a>
@@ -51,7 +53,7 @@
               <div class="link-underline"></div>
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </div>
     </header>
     <section class="homepage">
@@ -66,51 +68,116 @@
 
     <main class="about">
       <div class="container">
-        <div class="about-block">
-          <h2>its me</h2>
-          <p>
-            Soy un libre pensante, especializado en el area del desarrollo web,
-            lo que me encanta de esta profesión es el constante reto de tener
-            que aprender y aplicar nuevos conocimientos y tecnnologías.
-          </p>
-        </div>
-
-        <div class="about-block">
+        <div class="about-block picture">
           <img
             class="about-picture"
             src="./img/about-picture.png"
             alt="Fotografía de Alonso Cabret"
           />
         </div>
+        <div class="about-block description">
+          <h2>its me</h2>
+          <p>
+            Mi nombre es Alonso, un graduado de Ingeniería en Informática, y
+            actualmente un desarrollador web y freelancer radicado en la ciudad
+            de Concepción, Chile. Apasionado por la tecnología, el ciclismo y en
+            entregar productos de gran valor para mis clientes.
+          </p>
+        </div>
       </div>
     </main>
 
-    <section class="main-content__display animate__animated">
+    <!-- <section class="the-process__display animate__animated">
       <div class="container">
         <div class="display-wrapper animate__animated"></div>
       </div>
-    </section>
+    </section> -->
 
-    <main class="main-content">
+    <main class="services">
       <div class="container">
-        <div class="main-content__grid" data-display="showcase">
-          <div class="main-content__block">
-            <article class="main-content__inner">
+        <h2 class="services__title">Servicios</h2>
+        <article class="full-service">
+          <div class="full-service__front">
+            <h2>Web dev</h2>
+            <div class="full-service__icon-wrapper">
+              <i class="fas fa-code fa-8x full-service__icon"></i>
+            </div>
+          </div>
+          <div class="full-service__description">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Mollitia, quod.
+            </p>
+            <ul>
+              <li>Consumo de APIs</li>
+              <li>Mobile first Development</li>
+              <li>and such</li>
+              <li>asdasddas</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="full-service">
+          <div class="full-service__front">
+            <h2>Wordpress</h2>
+            <div class="full-service__icon-wrapper">
+              <i class="fab fa-wordpress fa-10x full-service__icon"></i>
+            </div>
+          </div>
+          <div class="full-service__description">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Mollitia, quod.
+            </p>
+            <ul>
+              <li>Consumo de APIs</li>
+              <li>Mobile first Development</li>
+              <li>and such</li>
+              <li>asdasddas</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="full-service">
+          <div class="full-service__front">
+            <h2>Extras</h2>
+            <div class="full-service__icon-wrapper">
+              <i class="fas fa-tools fa-10x full-service__icon"></i>
+            </div>
+          </div>
+          <div class="full-service__description">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Mollitia, quod.
+            </p>
+            <ul>
+              <li>Consumo de APIs</li>
+              <li>Mobile first Development</li>
+              <li>and such</li>
+              <li>asdasddas</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <section class="the-process">
+      <div class="container">
+        <h2 class="the-process__title">El Proceso</h2>
+        <div class="the-process__grid">
+          <!-- <h2 class="the-process__title">El Proceso</h2> -->
+          <div class="the-process__block">
+            <article class="the-process__inner">
               <div>
-                <h2>Sobre mí</h2>
+                <h2>01.Reunión Inicial</h2>
                 <p>
-                  Soy un libre pensante, especializado en el area del desarrollo
-                  web, lo que me encanta de esta profesión es el constante reto
-                  de tener que aprender y aplicar nuevos conocimientos y
-                  tecnnologías.
+                  Tendremos la oportunidad de conocernos, discutir sobre tu
+                  negocio y las metas que quisieras lograr para tu nuevo sitio
+                  web
                 </p>
               </div>
-
-              <button id="aboutme-btn">
-                Saber más <span class="click-me">></span>
-              </button>
             </article>
-            <article class="display-item">
+            <!-- <article class="display-item">
               <div class="display-item__content">
                 <div>
                   <h2>Sobre mí</h2>
@@ -126,23 +193,20 @@
                   <p></p>
                 </div>
               </div>
-            </article>
+            </article> -->
           </div>
-          <div class="main-content__block">
-            <article class="main-content__inner">
+          <div class="the-process__block">
+            <article class="the-process__inner">
               <div>
-                <h2>Servicios</h2>
+                <h2>02.Hoja de Ruta</h2>
                 <p>
-                  Sitios web, rediseños ,interfaces, tipografías, backend y
-                  aplicaciones. Te invito a revisar mis servicios y trabajos.
+                  Ya habiendo conocido los retos del negocio, te daré a conocer
+                  mi propuesta, junto con un diseño inicial y como procederemos
+                  de aquí al futuro
                 </p>
               </div>
-
-              <button id="portfolio-btn">
-                Ver mi trabajo <span class="click-me">></span>
-              </button>
             </article>
-            <article class="display-item">
+            <!-- <article class="display-item">
               <div class="display-item__content">
                 <div>
                   <h2>Servicios</h2>
@@ -165,24 +229,21 @@
                   <p>fotitos en un grid</p>
                 </div>
               </div>
-            </article>
+            </article> -->
           </div>
-          <div class="main-content__block">
-            <article class="main-content__inner">
+          <div class="the-process__block">
+            <article class="the-process__inner">
               <div>
-                <h2>Contacto</h2>
+                <h2>03.Desarrollo, entrega y soporte</h2>
                 <p>
-                  Me encuentro disponible actualmente para trabajar bajo
-                  contrato, o como freelancer. Si crees que puedo ayudarte de
-                  alguna forma, no dudes en contactarme por aquí abajo.
+                  Aquí es donde empieza el verdadero trabajo, podras ver ya un
+                  producto tangible, el cual mediante tus sugerencias y mis
+                  habilidades, iremos perfeccionando hasta lograr un producto
+                  que dé una solución a los problemas descubiertos previamente
                 </p>
               </div>
-
-              <button id="contact-btn">
-                Contáctame <span class="click-me">></span>
-              </button>
             </article>
-            <article class="display-item">
+            <!-- <article class="display-item">
               <div class="display-item__content">
                 <div>
                   <h2>Contacto</h2>
@@ -202,11 +263,48 @@
                   </form>
                 </div>
               </div>
-            </article>
+            </article> -->
           </div>
         </div>
       </div>
-    </main>
+    </section>
+
+    <!-- <div class="container-slider">
+      <ul class="slider">
+        <li id="slide1">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg"
+          />
+        </li>
+        <li id="slide2">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg"
+          />
+        </li>
+        <li id="slide3">
+          <h1>Ejemplo con otros elementos</h1>
+          <p>
+            Esto es un párrafo de ejemplo para comprobar que podemos meter
+            cualquier tipo de elementos en el slider
+          </p>
+          <a href="https://kikopalomares.com/"
+            >¡Corre a mi web para más contenido!</a
+          >
+        </li>
+      </ul>
+
+      <ul class="menu">
+        <li>
+          <a href="#slide1">1</a>
+        </li>
+        <li>
+          <a href="#slide2">2</a>
+        </li>
+        <li>
+          <a href="#slide3">3</a>
+        </li>
+      </ul>
+    </div> -->
 
     <footer class="footer">
       <div class="container">
@@ -241,7 +339,7 @@
             </a>
           </li>
         </ul>
-        <h4>Copyright &copy; 2021 Alonso Cabret</h4>
+        <h4>&copy; 2021 Alonso Cabret</h4>
       </div>
     </footer>
   </body>
