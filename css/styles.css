@@ -259,9 +259,9 @@ p {
 } 
 
 .about-block.picture {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .about-block.description {
@@ -279,13 +279,21 @@ p {
 }
 
 .about-picture {
-  object-fit: cover;
-  /* aspect-ratio: 1 / 1; */
+  /* object-fit: cover;
   width: 100%;
   max-width: 320px;
   max-height: 320px;
   border-radius: 50%;
-  object-position: 0 -20px;
+  object-position: 0 -20px; */
+  padding-top: 100%;
+  background-image: url("/img/about-picture.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 100%;
+  margin:0 auto;
+
+
 }
 
 @media (min-width: 768px) {
@@ -294,6 +302,7 @@ p {
   }
 
   .about-block.picture {
+    padding: 0 2rem;
     width: 40%;
   }
   
