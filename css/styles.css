@@ -85,7 +85,9 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+p {
+  margin-top: 0;
   font-family: var(--header-font);
 }
 
@@ -110,9 +112,6 @@ a {
   );
 }
 
-.header__navigation {
-  /* padding-top: 0.5rem; */
-}
 
 .header__logo-text {
   color: white;
@@ -259,9 +258,10 @@ p {
 } 
 
 .about-block.picture {
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .about-block.description {
@@ -337,6 +337,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 2px solid red;
 }
 
 .full-service:not(:last-child) {
@@ -619,6 +620,7 @@ p {
 }
 
 .footer h4 {
+  margin: 1rem 0;
   font-weight: 300;
 }
 
