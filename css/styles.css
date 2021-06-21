@@ -321,7 +321,8 @@ p {
 
 .services {
   padding: 2.5rem 0;
-  background-color: hsl(0, 0%, 97%);
+  /* background-color: hsl(0, 0%, 97%); */
+  background-color:  hsl(0, 0%, 93%);
 }
 
 .services__title {
@@ -337,7 +338,8 @@ p {
   justify-content: center;
   padding: 2rem;
   z-index: 6;
-  background-color:  hsl(0, 0%, 93%);
+  background-color: hsl(0, 0%, 97%);
+  /* background-color:  hsl(0, 0%, 93%); */
   /* box-shadow: hsla(0, 2%, 12%, 0.103) 0px 48px 100px 0px; */
 }
 
@@ -670,6 +672,11 @@ p {
 
 .footer {
   background-color: #e2dcdc;
+}
+
+.footer h4,
+.footer li{
+  font-size: 1.125rem;
 }
 
 .footer h4 {
