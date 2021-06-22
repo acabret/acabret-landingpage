@@ -69,11 +69,6 @@
     <main class="about">
       <div class="container">
         <div class="about-block picture">
-          <!-- <img
-            class="about-picture"
-            src="./img/about-picture.png"
-            alt="Fotografía de Alonso Cabret"
-          /> -->
           <div class="about-picture"></div>
         </div>
         <div class="about-block description">
@@ -82,21 +77,18 @@
             Mi nombre es Alonso, un graduado de Ingeniería en Informática, y
             actualmente un desarrollador web y freelancer radicado en la ciudad
             de Concepción, Chile. Apasionado por la tecnología, el ciclismo y en
-            entregar productos de gran valor para mis clientes.
+            entregar productos de calidad que otorguen valor a mis clientes.
           </p>
         </div>
       </div>
     </main>
 
-    <!-- <section class="the-process__display animate__animated">
-      <div class="container">
-        <div class="display-wrapper animate__animated"></div>
-      </div>
-    </section> -->
-
     <main class="services">
       <div class="container">
-        <h2 class="services__title">Servicios</h2>
+        <h2 class="services__title">
+          Emprendedor? Reclutador TI? Quien sea el visitante, estoy seguro que
+          podré ayudarte con alguno de mis servicios
+        </h2>
         <div class="full-service__wrapper">
           <article class="full-service">
             <div class="full-service__front">
@@ -105,16 +97,23 @@
               </div>
             </div>
             <div class="full-service__description">
-              <h2>Web dev</h2>
+              <h2>Desarrollo Web</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Mollitia, quod.
+                Desde el diseño, desarrollo y la implementación, soy capaz de
+                crear aplicaciones completas, encargandome tanto del frontend
+                como el backend, siempre teniendo como principales focos: la
+                funcionalidad, la presentacion y el rendimiento.
+              </p>
+              <p>
+                Al momento de crear mis aplicaciones, las herramientas que
+                prefiero utilizar son...
               </p>
               <ul>
-                <li>Consumo de APIs</li>
-                <li>Mobile first Development</li>
-                <li>and such</li>
-                <li>asdasddas</li>
+                <li>React</li>
+                <li>Vanilla Javascript - ES6+</li>
+                <li>NodeJS</li>
+                <li>Testing con Jest y Cypress</li>
+                <li>Bases de datos: MongoDB o MySQL</li>
               </ul>
             </div>
           </article>
@@ -130,14 +129,22 @@
             <div class="full-service__description">
               <h2>Wordpress</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Mollitia, quod.
+                Wordpress es una de las herramienta favoritas a la hora de
+                levantar un sitio web, está encargada de mantener arriba
+                aproximadamente un 30% de la web en el mundo. Esto debido a su
+                facilidad de uso, bajos costos de implementación y mantencion, y
+                ademas que ofrece un sin fin de opciones para dejar el sitio a
+                tu gusto.
+              </p>
+              <p>
+                Con Wordpress se pueden levantar sitios como...
               </p>
               <ul>
-                <li>Consumo de APIs</li>
-                <li>Mobile first Development</li>
-                <li>and such</li>
-                <li>asdasddas</li>
+                <li>Blogs</li>
+                <li>Sitios web informativos</li>
+                <li>Tiendas online</li>
+                <li>Foros</li>
+                <li>Y muchos más...</li>
               </ul>
             </div>
           </article>
@@ -172,7 +179,6 @@
       <div class="container">
         <h2>El Proceso</h2>
         <div class="the-process__grid">
-          <!-- <h2 class="the-process__title">El Proceso</h2> -->
           <div class="the-process__block">
             <article class="the-process__inner">
               <div>
@@ -209,29 +215,29 @@
                 </p>
               </div>
             </article>
-            <!-- <article class="display-item">
-              <div class="display-item__content">
-                <div>
-                  <h2>Contacto</h2>
-                  <p>
-                    Puedes encontrarme en redes sociales, o contactarme
-                    directamente por aquí, prometo responderte lo antes posible.
-                  </p>
-                </div>
-                <div>
-                  <form action="">
-                    <label for="">Nombre</label>
-                    <input type="text" />
-                    <label for="">Correo electrónico</label>
-                    <input type="text" />
-                    <label for="">Mensaje</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                  </form>
-                </div>
-              </div>
-            </article> -->
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <form class="contact-form">
+          <label for="">
+            <input name="nombre" type="text" />
+          </label>
+
+          <label for="email">
+            <input name="email" type="text" />
+          </label>
+
+          <label for="">
+            <input type="text" />
+          </label>
+          <label for="mensaje">
+            <textarea name="mensaje" id="" cols="30" rows="10"> </textarea>
+          </label>
+        </form>
       </div>
     </section>
 
