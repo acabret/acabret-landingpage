@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_CL">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desarrollador Web | Alonso Cabret</title>
+    <title>Fullstack Developer | Alonso Cabret</title>
 
     <meta property="og:locale" content="es_CL" />
     <meta property="og:type" content="website" />
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/css/test.css" />
     <link rel="stylesheet" href="/css/styles.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="js/app.js" type="module"></script>
     <script
       src="https://kit.fontawesome.com/27dfb3bdd2.js"
@@ -32,7 +33,14 @@
   <body>
     <header class="header">
       <div class="container">
-        <h1 class="header__logo-text">Alonso Cabret</h1>
+        <h1
+          class="header__logo-text"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+          data-aos-duration="650"
+        >
+          Alonso Cabret
+        </h1>
 
         <!-- <nav class="header__navigation">
           <ul>
@@ -59,9 +67,13 @@
     <section class="homepage">
       <div class="container">
         <section class="homepage__main">
-          <img class="homepage__image" src="/img/homepage-image.png" alt="" />
-          <h2>Frontend Developer<span>_</span></h2>
-          <h4>En busca de nuevas oportunidades</h4>
+          <div class="homepage-image-wrapper" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="650">
+            <img class="homepage__image" src="/img/homepage-image.png" alt="" />
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="700" data-aos-duration="650">
+            <h2>Fullstack Developer<span>_</span></h2>
+            <h4>En busca de nuevas oportunidades</h4>
+          </div>
         </section>
       </div>
     </section>
@@ -90,7 +102,11 @@
           podré ayudarte con alguno de mis servicios
         </h2>
         <div class="full-service__wrapper">
-          <article class="full-service">
+          <article
+            class="full-service"
+            data-aos="fade-left"
+            data-aos-once="true"
+          >
             <div class="full-service__front">
               <div class="full-service__icon-wrapper">
                 <i class="fas fa-code fa-8x full-service__icon"></i>
@@ -110,8 +126,8 @@
               </p>
               <ul>
                 <li>React</li>
-                <li>Vanilla Javascript - ES6+</li>
-                <li>NodeJS</li>
+                <li>Vanilla Javascript/ES6+</li>
+                <li>NodeJS/Express</li>
                 <li>Testing con Jest y Cypress</li>
                 <li>Bases de datos: MongoDB o MySQL</li>
               </ul>
@@ -120,7 +136,11 @@
         </div>
 
         <div class="full-service__wrapper">
-          <article class="full-service">
+          <article
+            class="full-service"
+            data-aos="fade-right"
+            data-aos-once="true"
+          >
             <div class="full-service__front">
               <div class="full-service__icon-wrapper">
                 <i class="fab fa-wordpress fa-10x full-service__icon"></i>
@@ -136,9 +156,7 @@
                 ademas que ofrece un sin fin de opciones para dejar el sitio a
                 tu gusto.
               </p>
-              <p>
-                Con Wordpress se pueden levantar sitios como...
-              </p>
+              <p>Con Wordpress se pueden levantar sitios como...</p>
               <ul>
                 <li>Blogs</li>
                 <li>Sitios web informativos</li>
@@ -151,7 +169,11 @@
         </div>
 
         <div class="full-service__wrapper">
-          <article class="full-service">
+          <article
+            class="full-service"
+            data-aos="fade-left"
+            data-aos-once="true"
+          >
             <div class="full-service__front">
               <div class="full-service__icon-wrapper">
                 <i class="fas fa-tools fa-10x full-service__icon"></i>
@@ -160,14 +182,14 @@
             <div class="full-service__description">
               <h2>Extras</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Mollitia, quod.
+                Como complemento a los servicios que te ofrezo arriba, cuento
+                con otras habilidades igual de importantes como...
               </p>
               <ul>
-                <li>Consumo de APIs</li>
-                <li>Mobile first Development</li>
-                <li>and such</li>
-                <li>asdasddas</li>
+                <li>Manipulación de imágenes</li>
+                <li>Servicio de Hosting</li>
+                <li>Capacitación en sistemas Wordpress</li>
+                <li>Diseño Web Adaptable</li>
               </ul>
             </div>
           </article>
@@ -222,22 +244,29 @@
 
     <section class="contact-section">
       <div class="container">
-        <form class="contact-form">
-          <label for="">
-            <input name="nombre" type="text" />
-          </label>
+        <div
+          class="contact-section__wrapper"
+          data-aos="zoom-in"
+          data-aos-once="true"
+          data-aos-delay="300"
+        >
+          <div class="contact-section__details">
+            <p>detalles redes sociales y algun texto</p>
+          </div>
+          <div class="contact-section__form">
+            <form id="contact-form" class="contact-form">
+              <label for="">Ingresa tu nombre </label>
+              <input name="nombre" type="text" />
 
-          <label for="email">
-            <input name="email" type="text" />
-          </label>
+              <label for="email">Ingresa tu email </label>
+              <input name="email" type="text" />
 
-          <label for="">
-            <input type="text" />
-          </label>
-          <label for="mensaje">
-            <textarea name="mensaje" id="" cols="30" rows="10"> </textarea>
-          </label>
-        </form>
+              <label for="mensaje">Escríbeme algo </label>
+              <textarea name="mensaje" id="" cols="30" rows="10"> </textarea>
+              <button id="form-submit">enviar</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -277,5 +306,10 @@
         <h4>&copy; 2021 Alonso Cabret</h4>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

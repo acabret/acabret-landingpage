@@ -1,31 +1,27 @@
-import Display from "./display.js";
+const formButton = document.querySelector("#form-submit");
+const contactForm = document.querySelector("#contact-form");
 
-const portfolioBtn = document.querySelector("#portfolio-btn");
-const aboutmeBtn = document.querySelector("#aboutme-btn");
-const contactBtn = document.querySelector("#contact-btn");
-const displayContainer = document.querySelector(".main-content__display");
-const displayWrapper = document.querySelector(".display-wrapper");
-const footer = document.querySelector("footer");
+formButton.addEventListener("click", submitForm);
+contactForm.addEventListener("submit", submitForm);
 
-const showcaseDisplay = new Display(displayWrapper, "showcase");
+function submitForm(event) {
+  event.preventDefault();
+  console.log("submiteando el form desde", this);
 
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
+  //ejecutar animacion del boton
+  //verificar datos correctamente ingresados
+  //
+
+
+  
+
+  // fetch("")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     //terminar animacion del boton
+  //     //desplegar mensaje de que el mensaje se ha enviado de forma correcta
+  //   })
+  //   .catch((error) => {
+  //     console.log("errorcete");
+  //   });
 }
-
-// function makeDisplayNode(innerHtml) {
-//   const parentElement = document.createElement("div");
-//   const container = document.createElement("div");
-//   parentElement.classList.add("display-parent");
-//   parentElement.appendChild(container);
-//   container.classList.add("display-container");
-//   container.innerHTML = innerHtml;
-//   // display.appendChild(parentElement);
-//   return parentElement;
-// }
-
-// function loadContact() {
-//   return `<p>contacto</p>`;
-// }
