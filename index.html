@@ -67,7 +67,12 @@
     <section class="homepage">
       <div class="container">
         <section class="homepage__main">
-          <div class="homepage-image-wrapper" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="650">
+          <div
+            class="homepage-image-wrapper"
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+            data-aos-duration="650"
+          >
             <img class="homepage__image" src="/img/homepage-image.png" alt="" />
           </div>
           <div data-aos="zoom-in" data-aos-delay="700" data-aos-duration="650">
@@ -182,7 +187,7 @@
             <div class="full-service__description">
               <h2>Extras</h2>
               <p>
-                Como complemento a los servicios que te ofrezo arriba, cuento
+                Como complemento a los servicios que te ofrezco arriba, cuento
                 con otras habilidades igual de importantes como...
               </p>
               <ul>
@@ -251,7 +256,42 @@
           data-aos-delay="300"
         >
           <div class="contact-section__details">
-            <p>detalles redes sociales y algun texto</p>
+            <p>
+              ¿Te gustó lo que acabas de ver? Si estás interesado en colaborar
+              juntos, puedes mandarme un mensaje por cualquiera de las
+              plataformas que he listado aquí abajo.
+            </p>
+
+            <ul class="contact-section__media">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/acabret"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="contact-section__media-link"
+                  ><i class="fab fa-linkedin"></i><span>LinkedIn</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/acabret/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="contact-section__media-link"
+                  ><i class="fab fa-github"></i><span>Github</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/alonso.cbrt/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="contact-section__media-link"
+                  ><i class="fab fa-instagram"></i><span>Instagram</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div class="contact-section__form">
             <form id="contact-form" class="contact-form">
@@ -259,7 +299,7 @@
               <input name="nombre" type="text" />
 
               <label for="email">Ingresa tu email </label>
-              <input name="email" type="text" />
+              <input name="email" type="email" />
 
               <label for="mensaje">Escríbeme algo </label>
               <textarea name="mensaje" id="" cols="30" rows="10"> </textarea>
@@ -306,6 +346,10 @@
         <h4>&copy; 2021 Alonso Cabret</h4>
       </div>
     </footer>
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"
+      defer
+    ></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

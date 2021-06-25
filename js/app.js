@@ -1,15 +1,24 @@
 const formButton = document.querySelector("#form-submit");
-const contactForm = document.querySelector("#contact-form");
+const contactForm = document.getElementById("contact-form");
 
 formButton.addEventListener("click", submitForm);
 contactForm.addEventListener("submit", submitForm);
 
+
+//decidir si usar boton o input con estilo de boton para submit del form
 function submitForm(event) {
   event.preventDefault();
-  console.log("submiteando el form desde", this);
+  const data = new FormData(contactForm)
+  console.log(data);
+  // console.log("submiteando el form desde", this);
+
+  for(const entry in data.entries()){
+    console.log("dato del form", entry);
+  }
 
   //ejecutar animacion del boton
   //verificar datos correctamente ingresados
+  //usar validate.js
   //
 
 

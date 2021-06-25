@@ -309,7 +309,7 @@ p {
 
 @media (min-width: 768px) {
   .about {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
   }
 
   .about-block.picture {
@@ -460,7 +460,7 @@ p {
 
 @media (min-width: 768px) {
   .services {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
   }
 
   .full-service__front {
@@ -526,7 +526,7 @@ p {
 .the-process__inner button {
   display: inline-block;
   position: relative;
-  background-color: rgb(9, 86, 150);
+  background-color: hsl(207, 89%, 31%);
   color: white;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
@@ -643,10 +643,40 @@ p {
   font-variant: small-caps;
 }
 
+
+.contact-section__media{
+
+}
+
+.contact-section__media li{
+  display: block;
+  position:relative;
+  margin-bottom: .5rem;
+}
+
+.contact-section__media a{
+  text-decoration: none;
+  color: hsl(214, 60%, 17%);
+}
+
+.contact-section__media i.fab{
+  font-size: 2rem;
+  margin-right: .5rem;
+}
+
+.contact-section__media span{
+  position:absolute;
+  font-size: 1.125rem;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+
 @media (min-width:768px) {
 
 .contact-section{
-  padding: 5rem 0;
+  padding: 3.5rem 0;
 }
 
 .contact-section__details{
