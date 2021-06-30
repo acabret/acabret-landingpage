@@ -19,8 +19,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="/css/test.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="js/app.js" type="module"></script>
@@ -73,7 +73,7 @@
             data-aos-delay="1000"
             data-aos-duration="650"
           >
-            <img class="homepage__image" src="/img/homepage-image.png" alt="" />
+            <img class="homepage__image" src="img/homepage-image.png" alt="" />
           </div>
           <div data-aos="zoom-in" data-aos-delay="700" data-aos-duration="650">
             <h2>Fullstack Developer<span>_</span></h2>
@@ -258,8 +258,8 @@
           <div class="contact-section__details">
             <p>
               ¿Te gustó lo que acabas de ver? Si estás interesado en colaborar
-              juntos, puedes mandarme un mensaje por cualquiera de las
-              plataformas que he listado aquí abajo.
+              juntos, puedes enviarme un mensaje por cualquiera de las
+              plataformas que he listado aquí abajo. O tambien usando
             </p>
 
             <ul class="contact-section__media">
@@ -291,20 +291,43 @@
                   ><i class="fab fa-instagram"></i><span>Instagram</span>
                 </a>
               </li>
+              <li><a href="/submitForm.php">test</a></li>
             </ul>
           </div>
           <div class="contact-section__form">
             <form id="contact-form" class="contact-form">
-              <label for="">Ingresa tu nombre </label>
-              <input name="nombre" type="text" />
+              <label for="nombre">Tu nombre</label>
+              <input
+                id="form-nombre"
+                name="nombre"
+                type="text"
+                value="yourname"
+              />
 
-              <label for="email">Ingresa tu email </label>
-              <input name="email" type="email" />
+              <label for="email">Tu email</label>
+              <input
+                id="form-email"
+                name="email"
+                type="email"
+                value="email@test.com"
+              />
 
-              <label for="mensaje">Escríbeme algo </label>
-              <textarea name="mensaje" id="" cols="30" rows="10"> </textarea>
-              <button id="form-submit">enviar</button>
+              <label for="mensaje">¿Cómo puedo ayudarte?</label>
+              <textarea
+                id="form-mensaje"
+                name="mensaje"
+                id=""
+                cols="30"
+                rows="10"
+              >
+your message </textarea
+              >
+              <!-- <button id="form-submit">enviar</button> -->
+              <input id="form-submit" type="submit" value="enviar" />
             </form>
+            <div class="loading-spinner-wrapper">
+              <div class="loading-spinner"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +335,7 @@
 
     <footer class="footer">
       <div class="container">
-        <h4>contacto@acabret.com</h4>
+        <h4 id="email"></h4>
         <ul class="footer-media">
           <li class="footer-media__item">
             <a
