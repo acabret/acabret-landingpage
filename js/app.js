@@ -13,13 +13,6 @@ emailHTML.innerHTML = email;
 
 let inputTimersArray = [];
 
-// formButton.addEventListener("click", function(e){
-//   e.preventDefault();
-//   this.classList.add("button-click")
-
-// })
-
-// formButton.addEventListener("click", submitForm)
 
 contactForm.addEventListener("submit", submitForm);
 
@@ -63,8 +56,6 @@ function submitForm(event) {
   if (!errors) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
-    // formButton.ssetInputErrorsetAttribute("disabled")
-    // formButton.classList.add("loading")
 
     new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -135,20 +126,4 @@ function submitForm(event) {
     });
   }
 
-  // console.log("submiteando el form desde", this);
-
-  //ejecutar animacion del boton
-  //verificar datos correctamente ingresados
-  //usar validate.js
-  //
-
-  // fetch("")
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     //terminar animacion del boton
-  //     //desplegar mensaje de que el mensaje se ha enviado de forma correcta
-  //   })
-  //   .catch((error) => {
-  //     console.log("errorcete");
-  //   });
 }
