@@ -11,7 +11,7 @@ const email =
 
 emailHTML.innerHTML = email;
 
-// let timers = []
+let inputTimersArray = [];
 
 // formButton.addEventListener("click", function(e){
 //   e.preventDefault();
@@ -26,12 +26,6 @@ contactForm.addEventListener("submit", submitForm);
 //decidir si usar boton o input con estilo de boton para submit del form
 function submitForm(event) {
   event.preventDefault();
-  // formButton.classList.add("button-click");
-
-  // //refactorizar esto
-  // setTimeout(() => {
-  //   formButton.classList.remove("button-click");
-  // }, 1000);
 
   const formConstraints = {
     nombre: {
@@ -95,8 +89,9 @@ function submitForm(event) {
     console.log(errors);
     const errorList = [];
 
-    const timers = setInputErrors(errors);
-    console.log(timers);
+    clearInputTimers(inputTimersArray);
+    inputTimersArray = setInputErrors(errors);
+    // console.log(timers);
 
     Object.keys(errors).forEach((item) => {
       errors[item].forEach((msg) => {
@@ -110,8 +105,8 @@ function submitForm(event) {
   function setInputErrors(errors) {
     const timers = [];
 
-    Object.keys(errors).forEach((key) => {
-      const input = document.querySelector(`#form-${key}`);
+    Object.keys(errors).forEach((errorKey) => {
+      const input = document.querySelector(`#form-${errorKey}`);
       input.classList.add("error");
       timers.push({
         nodeTimer: setTimeout(() => {
@@ -131,13 +126,13 @@ function submitForm(event) {
     });
 
     return [...timers];
-    // setTimeout(() => {
-    //   Object.keys(errors).forEach((key)=>{
-    //     const input = document.querySelector(`#form-${key}`)
-    //     input.classList.remove('error')
+  }
 
-    //   })
-    // }, 5000);
+  function clearInputTimers(inputTimersArray) {
+    inputTimersArray.forEach((timerNode) => {
+      timerNode.node.classList.remove("error");
+      clearTimeout(timerNode.nodeTimer);
+    });
   }
 
   // console.log("submiteando el form desde", this);
