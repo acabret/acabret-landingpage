@@ -67,7 +67,7 @@ function submitForm(event) {
   if (!errors) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
-    // formButton.setAttribute("disabled")
+    // formButton.ssetInputErrorsetAttribute("disabled")
     // formButton.classList.add("loading")
 
     new Promise((resolve,reject) => {
@@ -93,7 +93,10 @@ function submitForm(event) {
     //     console.log(response);
     //   });
   } else {
+    console.log(errors);
     const errorList = [];
+
+    setInputErrors(errors)
 
     Object.keys(errors).forEach((item) => {
       errors[item].forEach((msg) => {
@@ -103,6 +106,35 @@ function submitForm(event) {
 
     console.log("errores en el formulario", errorList);
   }
+
+
+
+
+function setInputErrors(errors){
+
+  Object.keys(errors).forEach((key)=>{
+    const input = document.querySelector(`#form-${key}`)
+    input.classList.add('error')
+    setTimeout(() => {
+      input.classList.remove('error')
+    }, 5000);
+  })
+
+  formButton.classList.add('error')
+
+  setTimeout(() => {
+    formButton.classList.remove('error')
+  }, 5000);
+  // setTimeout(() => {
+  //   Object.keys(errors).forEach((key)=>{
+  //     const input = document.querySelector(`#form-${key}`)
+  //     input.classList.remove('error')
+  
+  //   })
+  // }, 5000);
+
+}
+
 
   // console.log("submiteando el form desde", this);
 

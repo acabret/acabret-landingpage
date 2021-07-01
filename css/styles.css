@@ -594,8 +594,8 @@ p {
   font-size: 1.125rem;
 }
 
-.contact-form input {
-  margin-bottom: 0.7rem;
+.contact-form input{
+  margin-bottom: .75rem;
 }
 
 .contact-form input,
@@ -604,7 +604,8 @@ p {
   border: 2px solid hsl(214, 60%, 17%);
   border-radius: 0px;
   background-color: hsl(0, 0%, 97%);
-  transition: border-radius border-width 0.4s linear;
+  transition: border-radius 0.4s linear, border-width 0.4s linear, border-color 0.4s linear;
+  
 }
 
 .contact-form input:focus,
@@ -655,9 +656,26 @@ p {
   }
 }
 
+.contact-form input.error,
+.contact-form textarea.error{
+
+  border-color: red;
+
+}
+
+.contact-form input#form-submit.error{
+  background-color: red;
+}
+
 .contact-form input:disabled {
   cursor: wait;
   background-color: green;
+}
+
+.contact-form input[type="submit"]:active {
+  animation: buttonClick 0.3s ease forwards;
+  /* filter: grayscale(); */
+  /* transform: scale(1.01); */
 }
 
 .contact-form input[type="submit"].button-click {
