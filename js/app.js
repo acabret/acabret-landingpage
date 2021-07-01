@@ -24,12 +24,12 @@ contactForm.addEventListener("submit", submitForm);
 //decidir si usar boton o input con estilo de boton para submit del form
 function submitForm(event) {
   event.preventDefault();
-  formButton.classList.add("button-click");
+  // formButton.classList.add("button-click");
   
-  //refactorizar esto
-  setTimeout(() => {
-    formButton.classList.remove("button-click");
-  }, 1000);
+  // //refactorizar esto
+  // setTimeout(() => {
+  //   formButton.classList.remove("button-click");
+  // }, 1000);
 
   const formConstraints = {
     nombre: {
