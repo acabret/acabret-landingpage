@@ -667,21 +667,19 @@ p {
   background-color: red;
 }
 
-.contact-form input:disabled {
+.contact-form input#form-submit:disabled {
   cursor: wait;
   background-color: green;
 }
 
 .contact-form input[type="submit"]:active {
-  animation: buttonClick 0.3s ease forwards;
+  animation: buttonClick 0.3s ease;
   /* filter: grayscale(); */
   /* transform: scale(1.01); */
 }
 
 .contact-form input[type="submit"].button-click {
   animation: buttonClick 0.3s ease forwards;
-  /* filter: grayscale(); */
-  /* transform: scale(1.01); */
 }
 
 .contact-section__media {

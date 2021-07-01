@@ -11,6 +11,8 @@ const email =
 
 emailHTML.innerHTML = email;
 
+// let timers = []
+
 // formButton.addEventListener("click", function(e){
 //   e.preventDefault();
 //   this.classList.add("button-click")
@@ -25,7 +27,7 @@ contactForm.addEventListener("submit", submitForm);
 function submitForm(event) {
   event.preventDefault();
   // formButton.classList.add("button-click");
-  
+
   // //refactorizar esto
   // setTimeout(() => {
   //   formButton.classList.remove("button-click");
@@ -70,19 +72,16 @@ function submitForm(event) {
     // formButton.ssetInputErrorsetAttribute("disabled")
     // formButton.classList.add("loading")
 
-    new Promise((resolve,reject) => {
-
+    new Promise((resolve, reject) => {
       setTimeout(() => {
-
-        resolve()
+        resolve();
       }, 3000);
-
-    }).then(response => {
-
-      formButton.disabled = false;
-      // formButton.removeAttribute("disabled")
-
-    }).catch(error => console.log("algo paso ", error))
+    })
+      .then((response) => {
+        formButton.disabled = false;
+        // formButton.removeAttribute("disabled")
+      })
+      .catch((error) => console.log("algo paso ", error));
     // fetch("submitForm.php", {
     //   method: "POST",
     //   body: new URLSearchParams(formValues),
@@ -96,7 +95,8 @@ function submitForm(event) {
     console.log(errors);
     const errorList = [];
 
-    setInputErrors(errors)
+    const timers = setInputErrors(errors);
+    console.log(timers);
 
     Object.keys(errors).forEach((item) => {
       errors[item].forEach((msg) => {
@@ -107,34 +107,38 @@ function submitForm(event) {
     console.log("errores en el formulario", errorList);
   }
 
+  function setInputErrors(errors) {
+    const timers = [];
 
+    Object.keys(errors).forEach((key) => {
+      const input = document.querySelector(`#form-${key}`);
+      input.classList.add("error");
+      timers.push({
+        nodeTimer: setTimeout(() => {
+          input.classList.remove("error");
+        }, 5000),
+        node: input,
+      });
+    });
 
+    formButton.classList.add("error");
 
-function setInputErrors(errors){
+    timers.push({
+      nodeTimer: setTimeout(() => {
+        formButton.classList.remove("error");
+      }, 5000),
+      node: formButton,
+    });
 
-  Object.keys(errors).forEach((key)=>{
-    const input = document.querySelector(`#form-${key}`)
-    input.classList.add('error')
-    setTimeout(() => {
-      input.classList.remove('error')
-    }, 5000);
-  })
+    return [...timers];
+    // setTimeout(() => {
+    //   Object.keys(errors).forEach((key)=>{
+    //     const input = document.querySelector(`#form-${key}`)
+    //     input.classList.remove('error')
 
-  formButton.classList.add('error')
-
-  setTimeout(() => {
-    formButton.classList.remove('error')
-  }, 5000);
-  // setTimeout(() => {
-  //   Object.keys(errors).forEach((key)=>{
-  //     const input = document.querySelector(`#form-${key}`)
-  //     input.classList.remove('error')
-  
-  //   })
-  // }, 5000);
-
-}
-
+    //   })
+    // }, 5000);
+  }
 
   // console.log("submiteando el form desde", this);
 
