@@ -480,7 +480,8 @@ p {
   padding: 3rem 0 3rem 0;
   /* background-color: hsl(0, 0%, 95%); */
   /* background-color: black; */
-  background-color: hsl(214, 60%, 17%);
+  /* background-color: hsl(214, 60%, 17%); */
+  background-color: hsl(18, 79%, 53%);
 }
 
 .the-process__grid {
