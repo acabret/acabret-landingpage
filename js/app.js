@@ -53,6 +53,8 @@ function submitForm(event) {
 
   const errors = validate(formValues, formConstraints);
 
+  clearInputTimers(inputTimersArray);
+  
   if (!errors) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
@@ -80,7 +82,7 @@ function submitForm(event) {
     console.log(errors);
     const errorList = [];
 
-    clearInputTimers(inputTimersArray);
+    
     inputTimersArray = setInputErrors(errors);
     // console.log(timers);
 

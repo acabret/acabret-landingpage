@@ -298,6 +298,7 @@ p {
   max-height: 320px;
   border-radius: 50%;
   object-position: 0 -20px; */
+  position: relative;
   padding-top: 100%;
   background-image: url("../img/about-picture.png");
   background-repeat: no-repeat;
@@ -305,6 +306,18 @@ p {
   border-radius: 50%;
   width: 100%;
   margin: 0 auto;
+}
+.about-picture::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 5px solid hsl(18, 79%, 53%);
+  border-radius: 50%;
+  top:0;
+  left:0;
+  transform: scale(1.055);
+  
 }
 
 @media (min-width: 768px) {
@@ -354,6 +367,7 @@ p {
   padding: 2rem;
   z-index: 6;
   background-color: hsl(0, 0%, 97%);
+  overflow-x: hidden;
   /* background-color:  hsl(0, 0%, 93%); */
   /* box-shadow: hsla(0, 2%, 12%, 0.103) 0px 48px 100px 0px; */
 }
@@ -361,6 +375,7 @@ p {
 .full-service__wrapper {
   position: relative;
   z-index: 5;
+  overflow-x: hidden;
 }
 
 /* .full-service__wrapper::before {
@@ -419,12 +434,17 @@ p {
   width: 100%;
 }
 
-.full-service h2,
 .fa-code,
 .fa-wordpress,
 .fa-tools {
-  color: hsl(214, 60%, 17%);
+  /* color: hsl(214, 60%, 17%); */
+  color: hsl(18, 79%, 53%);
   /* background: rgb(17, 39, 68); */
+}
+
+.full-service h2{
+  color: hsl(214, 60%, 17%);
+  /* color: hsl(18, 79%, 53%); */
 }
 
 .full-service p,
@@ -481,7 +501,7 @@ p {
   /* background-color: hsl(0, 0%, 95%); */
   /* background-color: black; */
   /* background-color: hsl(214, 60%, 17%); */
-  background-color: hsl(18, 79%, 53%);
+  background-color: hsl(18, 81%, 41%);
 }
 
 .the-process__grid {
@@ -579,7 +599,46 @@ p {
 
 .contact-section__details p {
   font-size: 1.125rem;
+  color: hsl(253, 7%, 41%);
 }
+
+.contact-section__media li {
+  display: block;
+  /* display: inline-block; */
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section__media a {
+  text-decoration: none;
+  /* color: hsl(214, 60%, 17%); */
+  color: hsl(18, 79%, 53%);
+}
+
+.contact-section__media i.fab {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.contact-section__media span {
+  position: absolute;
+  font-size: 1.125rem;
+  color: hsl(253, 7%, 41%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-section__media li:hover span{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 .contact-section__form {
   position: relative;
@@ -593,6 +652,7 @@ p {
   width: 100%;
   margin-bottom: 0.25rem;
   font-size: 1.125rem;
+  font-family: var(--header-font);
 }
 
 .contact-form input{
@@ -602,8 +662,9 @@ p {
 .contact-form input,
 .contact-form textarea {
   padding: 0.5rem;
-  border: 2px solid hsl(214, 60%, 17%);
-  border-radius: 0px;
+  border: 3px solid hsl(214, 60%, 17%); 
+  /* border: 2px solid hsl(18, 79%, 53%); */
+  border-radius: 6px;
   background-color: hsl(0, 0%, 97%);
   transition: border-radius 0.4s linear, border-width 0.4s linear, border-color 0.4s linear;
   
@@ -611,8 +672,7 @@ p {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-radius: 5px;
-  border-width: 4px;
+  outline: none;
 }
 
 .contact-form input::selection,
@@ -622,6 +682,7 @@ p {
 }
 .contact-form label {
   margin-bottom: 0.25rem;
+  color: hsl(253, 7%, 41%);
 }
 
 .contact-form textarea {
@@ -683,31 +744,6 @@ p {
   animation: buttonClick 0.3s ease forwards;
 }
 
-.contact-section__media {
-}
-
-.contact-section__media li {
-  display: block;
-  position: relative;
-  margin-bottom: 0.5rem;
-}
-
-.contact-section__media a {
-  text-decoration: none;
-  color: hsl(214, 60%, 17%);
-}
-
-.contact-section__media i.fab {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
-.contact-section__media span {
-  position: absolute;
-  font-size: 1.125rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 @keyframes loading-spinning {
   from {
