@@ -300,7 +300,7 @@ p {
   object-position: 0 -20px; */
   position: relative;
   padding-top: 100%;
-  background-image: url("../img/about-picture.jpg");
+  background-image: url("../img/about-picture.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
