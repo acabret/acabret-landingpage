@@ -46,9 +46,9 @@ ol {
   padding: 0;
   margin: 0;
 }
-li {
+/* li {
   display: inline-block;
-}
+} */
 
 .container {
   margin: 0 30px;
@@ -675,11 +675,6 @@ p {
   outline: none;
 }
 
-.contact-form input::selection,
-.contact-form textarea::selection {
-  /* outline: hsl(214, 60%, 17%) solid 20px; */
-  /* outline: 10px solid hsl(214, 60%, 17%); */
-}
 .contact-form label {
   margin-bottom: 0.25rem;
   color: hsl(253, 7%, 41%);
@@ -742,6 +737,45 @@ p {
 
 .contact-form input[type="submit"].button-click {
   animation: buttonClick 0.3s ease forwards;
+}
+
+
+.notification{
+  position: fixed;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  font-size: 1.125rem;
+  background-color: hsl(18, 81%, 41%);
+  z-index: 10;
+  top:20px;
+  left:50%;
+  max-width: 85%;
+  width: 100%;
+  transform: translateX(-50%);
+  border: 5px solid hsl(0, 0%, 93%);
+  border-radius: 10px;
+  opacity: .85;
+  pointer-events: none;
+
+}
+
+.notification.show{
+  display: block;
+}
+
+.notification__title{
+  margin-bottom: .5rem;
+}
+
+.notification__icon{
+  margin-right: .2rem;
+}
+
+.notification__list{
+  padding-left: 1.5rem;
+}
+.notification__list li{
+  margin-bottom: .5rem;
 }
 
 
@@ -816,6 +850,7 @@ p {
 }
 
 .footer-media__item {
+  display: inline-block;
   margin-right: 0.5rem;
 }
 
