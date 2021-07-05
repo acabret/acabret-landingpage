@@ -130,4 +130,25 @@ function submitForm(event) {
       clearTimeout(timerNode.nodeTimer);
     });
   }
+
+  function getErrorNodesFragment(errors) {
+    const fragment = new DocumentFragment();
+
+    errors.forEach((err) => {
+      const listItem = document.createElement("li");
+      const textContent = document.createTextNode(err);
+      listItem.appendChild(textContent);
+      fragment.appendChild(listItem);
+    });
+
+    return fragment;
+  }
+
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
+
 }
