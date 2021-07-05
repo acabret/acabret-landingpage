@@ -23,12 +23,10 @@ $body .= "Mensaje: ".$mensaje. "\n";
 
 // mail($to, $subject, $body);
 
-echo json_encode(array("datos ingresado" => array("nombre" => $nombre,
-"email" => $email,
-"mensaje" => $mensaje),
-"email body" => $body));
+http_response_code(200);
+echo json_encode(array("status"=>200,
+                      "message"=>"ok"));
 
-// echo json_encode("default response");
 exit;
 
 

@@ -5,9 +5,6 @@ const inputNombre = document.getElementById("form-nombre");
 const inputEmail = document.getElementById("form-email");
 const inputMensaje = document.getElementById("form-mensaje");
 
-const notification = document.querySelector(".notification");
-const notificationList = notification.querySelector(".notification__list");
-
 const emailHTML = document.getElementById("email");
 const email =
   "&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#111;&#064;&#097;&#099;&#097;&#098;&#114;&#101;&#116;&#046;&#099;&#111;&#109";
@@ -61,25 +58,34 @@ function submitForm(event) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
 
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve();
-      }, 3000);
-    })
-      .then((response) => {
-        formButton.disabled = false;
-        // formButton.removeAttribute("disabled")
-      })
-      .catch((error) => console.log("algo paso ", error));
-    // fetch("submitForm.php", {
-    //   method: "POST",
-    //   body: new URLSearchParams(formValues),
+    // new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve();
+    //   }, 3000);
     // })
-    //   .then((response) => response.json())
     //   .then((response) => {
     //     formButton.disabled = false;
-    //     console.log(response);
-    //   });
+    //     // formButton.removeAttribute("disabled")
+    //   })
+    //   .catch((error) => console.log("algo paso ", error));
+
+    fetch("submitForm.php", {
+      method: "POST",
+      body: new URLSearchParams(formValues),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        inputNombre.value = "";
+        inputEmail.value = "";
+        inputMensaje.value = "";
+        console.log("mensaje enviado :)", response);
+      })
+      .catch((error) => {
+        console.log("error de conexion :(");
+      })
+      .finally(() => {
+        formButton.disabled = false;
+      });
   } else {
     const errorList = [];
 
