@@ -5,6 +5,9 @@ const inputNombre = document.getElementById("form-nombre");
 const inputEmail = document.getElementById("form-email");
 const inputMensaje = document.getElementById("form-mensaje");
 
+const notification = document.querySelector(".notification");
+const notificationList = notification.querySelector(".notification__list");
+
 const emailHTML = document.getElementById("email");
 const email =
   "&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#111;&#064;&#097;&#099;&#097;&#098;&#114;&#101;&#116;&#046;&#099;&#111;&#109";
@@ -12,7 +15,6 @@ const email =
 emailHTML.innerHTML = email;
 
 let inputTimersArray = [];
-
 
 contactForm.addEventListener("submit", submitForm);
 
@@ -54,7 +56,7 @@ function submitForm(event) {
   const errors = validate(formValues, formConstraints);
 
   clearInputTimers(inputTimersArray);
-  
+
   if (!errors) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
@@ -82,7 +84,6 @@ function submitForm(event) {
     console.log(errors);
     const errorList = [];
 
-    
     inputTimersArray = setInputErrors(errors);
     // console.log(timers);
 
@@ -92,7 +93,9 @@ function submitForm(event) {
       });
     });
 
-    console.log("errores en el formulario", errorList);
+    removeAllChildNodes(notificationList);
+
+    notificationList.appendChild(getListErrorsFragment(errorList));
   }
 
   function setInputErrors(errors) {
@@ -128,4 +131,22 @@ function submitForm(event) {
     });
   }
 
+  function getListErrorsFragment(errors) {
+    const fragment = new DocumentFragment();
+
+    errors.forEach((err) => {
+      const listItem = document.createElement("li");
+      const textContent = document.createTextNode(err);
+      listItem.appendChild(textContent);
+      fragment.appendChild(listItem);
+    });
+
+    return fragment;
+  }
+
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
 }

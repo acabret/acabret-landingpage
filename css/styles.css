@@ -307,17 +307,16 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-.about-picture::before{
+.about-picture::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   border: 5px solid hsl(18, 79%, 53%);
   border-radius: 50%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   transform: scale(1.055);
-  
 }
 
 @media (min-width: 768px) {
@@ -442,7 +441,7 @@ p {
   /* background: rgb(17, 39, 68); */
 }
 
-.full-service h2{
+.full-service h2 {
   color: hsl(214, 60%, 17%);
   /* color: hsl(18, 79%, 53%); */
 }
@@ -629,16 +628,9 @@ p {
   transform: translateY(-50%);
 }
 
-.contact-section__media li:hover span{
+.contact-section__media li:hover span {
   text-decoration: underline;
 }
-
-
-
-
-
-
-
 
 .contact-section__form {
   position: relative;
@@ -655,19 +647,19 @@ p {
   font-family: var(--header-font);
 }
 
-.contact-form input{
-  margin-bottom: .75rem;
+.contact-form input {
+  margin-bottom: 0.75rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.5rem;
-  border: 3px solid hsl(214, 60%, 17%); 
+  border: 3px solid hsl(214, 60%, 17%);
   /* border: 2px solid hsl(18, 79%, 53%); */
   border-radius: 6px;
   background-color: hsl(0, 0%, 97%);
-  transition: border-radius 0.4s linear, border-width 0.4s linear, border-color 0.4s linear;
-  
+  transition: border-radius 0.4s linear, border-width 0.4s linear,
+    border-color 0.4s linear;
 }
 
 .contact-form input:focus,
@@ -714,13 +706,11 @@ p {
 }
 
 .contact-form input.error,
-.contact-form textarea.error{
-
+.contact-form textarea.error {
   border-color: red;
-
 }
 
-.contact-form input#form-submit.error{
+.contact-form input#form-submit.error {
   background-color: red;
 }
 
@@ -739,45 +729,61 @@ p {
   animation: buttonClick 0.3s ease forwards;
 }
 
+@keyframes showNotification {
+  0% {
+    display: none;
+    
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
 
-.notification{
+  100%{
+    opacity: 0.85;
+  }
+}
+
+.notification {
   position: fixed;
+  /* display: none; */
   padding: 1rem 1.2rem;
   color: #fff;
   font-size: 1.125rem;
   background-color: hsl(18, 81%, 41%);
   z-index: 10;
-  top:20px;
-  left:50%;
+  top: 20px;
+  left: 50%;
   max-width: 85%;
   width: 100%;
   transform: translateX(-50%);
   border: 5px solid hsl(0, 0%, 93%);
   border-radius: 10px;
-  opacity: .85;
+  opacity: 0;
   pointer-events: none;
-
+  transition: opacity .4s linear;
+  animation: showNotification .4s linear forwards;
+  animation-delay: 1s;
 }
 
-.notification.show{
+.notification.show {
   display: block;
 }
 
-.notification__title{
-  margin-bottom: .5rem;
+.notification__title {
+  margin-bottom: 0.5rem;
 }
 
-.notification__icon{
-  margin-right: .2rem;
+.notification__icon {
+  margin-right: 0.2rem;
 }
 
-.notification__list{
+.notification__list {
   padding-left: 1.5rem;
 }
-.notification__list li{
-  margin-bottom: .5rem;
+.notification__list li {
+  margin-bottom: 0.5rem;
 }
-
 
 @keyframes loading-spinning {
   from {
