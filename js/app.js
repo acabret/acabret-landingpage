@@ -5,6 +5,10 @@ const inputNombre = document.getElementById("form-nombre");
 const inputEmail = document.getElementById("form-email");
 const inputMensaje = document.getElementById("form-mensaje");
 
+const notification = document.querySelector(".notification");
+console.log(notification);
+const notificationList = document.querySelector(".notification__list");
+console.log(notificationList);
 const emailHTML = document.getElementById("email");
 const email =
   "&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#111;&#064;&#097;&#099;&#097;&#098;&#114;&#101;&#116;&#046;&#099;&#111;&#109";
@@ -80,7 +84,13 @@ function submitForm(event) {
         inputMensaje.value = "";
         console.log("mensaje enviado :)", response);
       })
-      .catch((error) => {
+      .catch(() => {
+        const error = ["Error de conexión"];
+        notificationList.appendChild(getErrorNodesFragment(error));
+        notification.classList.add("show");
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 5000);
         console.log("error de conexion :(");
       })
       .finally(() => {
@@ -89,7 +99,7 @@ function submitForm(event) {
   } else {
     const errorList = [];
 
-    inputTimersArray = setInputErrors(errors);
+    inputTimersArray = highlightInputErrors(errors);
 
     Object.keys(errors).forEach((item) => {
       errors[item].forEach((msg) => {
@@ -98,7 +108,7 @@ function submitForm(event) {
     });
   }
 
-  function setInputErrors(errors) {
+  function highlightInputErrors(errors) {
     const timers = [];
 
     Object.keys(errors).forEach((errorKey) => {
@@ -149,6 +159,4 @@ function submitForm(event) {
       parent.removeChild(parent.firstChild);
     }
   }
-
-
 }

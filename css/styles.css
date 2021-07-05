@@ -731,22 +731,17 @@ p {
 
 @keyframes showNotification {
   0% {
-    display: none;
-    
-  }
-  1% {
-    display: block;
     opacity: 0;
   }
 
-  100%{
+  100% {
     opacity: 0.85;
   }
 }
 
 .notification {
   position: fixed;
-  /* display: none; */
+  display: block;
   padding: 1rem 1.2rem;
   color: #fff;
   font-size: 1.125rem;
@@ -761,13 +756,15 @@ p {
   border-radius: 10px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .4s linear;
-  animation: showNotification .4s linear forwards;
-  animation-delay: 1s;
+  transition: opacity 0.4s linear;
+  /* transition-delay: 1s; */
 }
 
 .notification.show {
-  display: block;
+  /* display: block; */
+  /* opacity: .85; */
+  animation: showNotification .5s .3s linear forwards;
+  /* animation-delay: 0.3s; */
 }
 
 .notification__title {
