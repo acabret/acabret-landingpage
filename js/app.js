@@ -81,21 +81,15 @@ function submitForm(event) {
     //     console.log(response);
     //   });
   } else {
-    console.log(errors);
     const errorList = [];
 
     inputTimersArray = setInputErrors(errors);
-    // console.log(timers);
 
     Object.keys(errors).forEach((item) => {
       errors[item].forEach((msg) => {
         errorList.push(msg);
       });
     });
-
-    removeAllChildNodes(notificationList);
-
-    notificationList.appendChild(getListErrorsFragment(errorList));
   }
 
   function setInputErrors(errors) {
@@ -129,24 +123,5 @@ function submitForm(event) {
       timerNode.node.classList.remove("error");
       clearTimeout(timerNode.nodeTimer);
     });
-  }
-
-  function getListErrorsFragment(errors) {
-    const fragment = new DocumentFragment();
-
-    errors.forEach((err) => {
-      const listItem = document.createElement("li");
-      const textContent = document.createTextNode(err);
-      listItem.appendChild(textContent);
-      fragment.appendChild(listItem);
-    });
-
-    return fragment;
-  }
-
-  function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
   }
 }
