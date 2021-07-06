@@ -1,18 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 :root {
   --primary-color: #0072ce;
   --secondary-color: #0072ce;
   --header-font: "Roboto", sans-serif;
-}
-
-@font-face {
-  font-family: "Biotif";
-  src: url("Biotif-Regular.woff2") format("woff2"),
-    url("Biotif-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 html {
@@ -594,6 +584,7 @@ p {
 
 .contact-section__details {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .contact-section__details p {
@@ -634,6 +625,7 @@ p {
 
 .contact-section__form {
   position: relative;
+  padding-top: 1rem;
   width: 100%;
 }
 
@@ -815,10 +807,14 @@ p {
   }
 
   .contact-section__details {
+    padding-right: 1rem;
+    padding-bottom: 0;
     width: 50%;
   }
 
   .contact-section__form {
+    padding-left: 1rem;
+    padding-top: 0;
     width: 50%;
   }
 }
