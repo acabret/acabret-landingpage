@@ -71,9 +71,21 @@ function submitForm(event) {
     })
       .then((response) => response.json())
       .then((response) => {
-        inputNombre.value = "";
-        inputEmail.value = "";
-        inputMensaje.value = "";
+        if (response.status === 200) {
+          inputNombre.value = "";
+          inputEmail.value = "";
+          inputMensaje.value = "";
+          notificationTimer = setNotification(
+            "Mensaje enviado correctamente :)",
+            []
+          );
+        } else {
+          notificationTimer = setNotification(
+            "Uno de los campos tiene un error",
+            []
+          );
+        }
+
         console.log("mensaje enviado :)", response);
       })
       .catch(() => {
@@ -108,7 +120,7 @@ function submitForm(event) {
 
   function setNotification(title, messagesArray) {
     clearTimeout(notificationTimer);
-    removeAllChildNodes(notificationList)
+    removeAllChildNodes(notificationList);
     notificationTitle.textContent = title;
     notificationList.appendChild(getErrorNodesFragment(messagesArray));
     notification.classList.add("show");
