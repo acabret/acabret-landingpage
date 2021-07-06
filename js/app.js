@@ -62,7 +62,6 @@ function submitForm(event) {
   clearInputTimers(inputTimersArray);
 
   if (!errors) {
-    console.log("enviando el post a submitform");
     formButton.disabled = true;
 
     fetch("submitForm.php", {
@@ -94,7 +93,6 @@ function submitForm(event) {
           error
         );
 
-        console.log("error de conexion :(");
       })
       .finally(() => {
         formButton.disabled = false;
