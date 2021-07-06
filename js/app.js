@@ -86,16 +86,9 @@ function submitForm(event) {
           );
         }
 
-        console.log("mensaje enviado :)", response);
       })
       .catch(() => {
         const error = ["Error de conexión"];
-        // notificationList.appendChild(getErrorNodesFragment(error));
-        // notification.classList.add("show");
-        // setTimeout(() => {
-        //   notification.classList.remove("show");
-        // }, 5000);
-
         notificationTimer = setNotification(
           "Oh no, ha habido un problema",
           error

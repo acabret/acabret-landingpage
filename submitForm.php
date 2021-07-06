@@ -21,7 +21,7 @@ $body .= "De: ".$nombre. "\n";
 $body .= "Email: ".$email. "\n";
 $body .= "Mensaje: ".$mensaje. "\n";
 
-// mail($to, $subject, $body);
+mail($to, $subject, $body);
 
 http_response_code(200);
 echo json_encode(array("status"=>200,
@@ -29,23 +29,11 @@ echo json_encode(array("status"=>200,
 
 exit;
 
-
-
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
   }
-
-
-    //  echo json_encode(array("status" => 201,
-    //                         "mensaje" => "email sent"));
-   
-
-
-    // http_response_code(201);
-
-
 
 ?>
