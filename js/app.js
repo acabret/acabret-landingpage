@@ -6,9 +6,11 @@ const inputEmail = document.getElementById("form-email");
 const inputMensaje = document.getElementById("form-mensaje");
 
 const notification = document.querySelector(".notification");
-console.log(notification);
-const notificationList = document.querySelector(".notification__list");
-console.log(notificationList);
+const notificationTitle = notification.querySelector(
+  ".notification__title span"
+);
+const notificationList = notification.querySelector(".notification__list");
+
 const emailHTML = document.getElementById("email");
 const email =
   "&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#111;&#064;&#097;&#099;&#097;&#098;&#114;&#101;&#116;&#046;&#099;&#111;&#109";
@@ -16,6 +18,7 @@ const email =
 emailHTML.innerHTML = email;
 
 let inputTimersArray = [];
+let notificationTimer;
 
 contactForm.addEventListener("submit", submitForm);
 
@@ -62,17 +65,6 @@ function submitForm(event) {
     console.log("enviando el post a submitform");
     formButton.disabled = true;
 
-    // new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve();
-    //   }, 3000);
-    // })
-    //   .then((response) => {
-    //     formButton.disabled = false;
-    //     // formButton.removeAttribute("disabled")
-    //   })
-    //   .catch((error) => console.log("algo paso ", error));
-
     fetch("submitForm.php", {
       method: "POST",
       body: new URLSearchParams(formValues),
@@ -86,11 +78,17 @@ function submitForm(event) {
       })
       .catch(() => {
         const error = ["Error de conexión"];
-        notificationList.appendChild(getErrorNodesFragment(error));
-        notification.classList.add("show");
-        setTimeout(() => {
-          notification.classList.remove("show");
-        }, 5000);
+        // notificationList.appendChild(getErrorNodesFragment(error));
+        // notification.classList.add("show");
+        // setTimeout(() => {
+        //   notification.classList.remove("show");
+        // }, 5000);
+
+        notificationTimer = setNotification(
+          "Oh no, ha habido un problema",
+          error
+        );
+
         console.log("error de conexion :(");
       })
       .finally(() => {
@@ -106,6 +104,19 @@ function submitForm(event) {
         errorList.push(msg);
       });
     });
+  }
+
+  function setNotification(title, messagesArray) {
+    clearTimeout(notificationTimer);
+    removeAllChildNodes(notificationList)
+    notificationTitle.textContent = title;
+    notificationList.appendChild(getErrorNodesFragment(messagesArray));
+    notification.classList.add("show");
+    const timer = setTimeout(() => {
+      notification.classList.remove("show");
+    }, 5000);
+
+    return timer;
   }
 
   function highlightInputErrors(errors) {
